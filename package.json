@@ -1,5 +1,5 @@
 {
-  "name": "node-gify-cli",
+  "name": "gify-cli",
   "description": "CLI to convert video to high quality GIF with ffmpeg",
   "version": "1.0.0",
   "author": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/mattdesl"
   },
   "bin": {
-    "gify": "./cmd.js"
+    "gify": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/FujiHaruka/node-gify-cli/issues"

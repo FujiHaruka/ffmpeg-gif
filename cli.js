@@ -7,6 +7,7 @@ const gify = require('./gify')
 let argGiven = false
 
 commander
+  .name('gify')
   .version(pkg.version)
   .arguments('<input> <output>')
   .option('-f, --fps <fps>', 'fps', '20')
