@@ -18,20 +18,12 @@ function gify(input, output, options = {}) {
   const filter2 = ['-filter_complex', filterStr + '[x];[x][1:v]paletteuse']
 
   const baseFlags = ['-loglevel', 'error', '-y']
-  const pass1Flags = baseFlags.concat([ss, t, inputFlag, filter1, tmpFileName])
+  const pass1Flags = baseFlags
+    .concat([ss, t, inputFlag, filter1, tmpFileName])
     .filter(Boolean)
     .reduce(flat, [])
-  const pass2Flags = baseFlags.concat([
-    ss,
-    t,
-    inputFlag,
-    '-i',
-    tmpFileName,
-    filter2,
-    '-f',
-    'gif',
-    output,
-  ])
+  const pass2Flags = baseFlags
+    .concat([ss, t, inputFlag, '-i', tmpFileName, filter2, '-f', 'gif', output])
     .filter(Boolean)
     .reduce(flat, [])
   const proc = spawn(ffmpeg.path, pass1Flags, { stdio: 'inherit' })
