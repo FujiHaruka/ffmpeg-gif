@@ -25,7 +25,9 @@
     "commander": "^3.0.2",
     "rimraf": "^2.5.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
   "homepage": "https://github.com/FujiHaruka/node-gify-cli",
   "keywords": [
     "command",
@@ -40,6 +42,7 @@
     "url": "git://github.com/FujiHaruka/node-gify-cli.git"
   },
   "scripts": {
+    "format": "prettier *.js test/*.js --write",
     "test": "node test.js"
   }
 }
