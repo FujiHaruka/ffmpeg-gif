@@ -1,7 +1,7 @@
 {
   "name": "gify-cli",
   "description": "CLI to convert video to high quality GIF with ffmpeg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Matt DesLauriers",
     "email": "dave.des@gmail.com",
