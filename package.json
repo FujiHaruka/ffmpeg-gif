@@ -43,6 +43,6 @@
   },
   "scripts": {
     "format": "prettier *.js test/*.js --write",
-    "test": "node test.js"
+    "test": "node test/test.js"
   }
 }
