@@ -1,38 +1,44 @@
 {
-  "name": "ffmpeg-gif",
+  "name": "node-gify-cli",
+  "description": "CLI to convert video to high quality GIF with ffmpeg",
   "version": "1.0.0",
-  "description": "shell script to convert video to high quality GIF with ffmpeg",
-  "main": "index.js",
-  "license": "MIT",
   "author": {
     "name": "Matt DesLauriers",
     "email": "dave.des@gmail.com",
     "url": "https://github.com/mattdesl"
   },
+  "bin": {
+    "gify": "./cmd.js"
+  },
+  "bugs": {
+    "url": "https://github.com/FujiHaruka/node-gify-cli/issues"
+  },
+  "contributors": [
+    {
+      "name": "FujiHaruka",
+      "email": "fizzyjohn316@gmail.com",
+      "url": "https://github.com/FujiHaruka"
+    }
+  ],
   "dependencies": {
     "minimist": "^1.2.0",
     "rimraf": "^2.5.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "node test.js"
-  },
+  "homepage": "https://github.com/FujiHaruka/node-gify-cli",
   "keywords": [
+    "command",
     "ffmpeg",
     "gif",
-    "shell",
-    "command",
-    "script"
+    "script",
+    "shell"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Jam3/ffmpeg-gif.git"
+    "url": "git://github.com/FujiHaruka/node-gify-cli.git"
   },
-  "homepage": "https://github.com/Jam3/ffmpeg-gif",
-  "bugs": {
-    "url": "https://github.com/Jam3/ffmpeg-gif/issues"
-  },
-  "bin": {
-    "ffmpeg-gif": "./cmd.js"
+  "scripts": {
+    "test": "node test.js"
   }
 }

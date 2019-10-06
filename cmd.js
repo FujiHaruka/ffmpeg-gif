@@ -61,7 +61,7 @@ function finish () {
 function showHelp () {
   console.log([
     'Usage:\n',
-    'ffmpeg-gif input output [opts]\n',
+    'gify input output [opts]\n',
     'Options:\n',
     '  --fps, -f    fps, default 20',
     '  --scale, -s  resize to width:height (optional)',

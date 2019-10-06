@@ -1,4 +1,4 @@
-# ffmpeg-gif
+# node-gify-cli
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
@@ -13,26 +13,26 @@ Assumes `ffmpeg` command is globally available. Tested with ffmpeg 2.6.2.
 ## Install
 
 ```sh
-npm install ffmpeg-gif -g
+npm install node-gify-cli -g
 ```
 
 ## Examples
 
 ```sh
 # create 320w 30fps gif
-ffmpeg-gif input.mov output.gif --fps=30 --scale=320:-1
+node-gify-cli input.mov output.gif --fps=30 --scale=320:-1
 
 # seek to 23s and make the gif 10s in length
-ffmpeg-gif input.mov output.gif --seek 23 --time 10
+node-gify-cli input.mov output.gif --seek 23 --time 10
 
 # seek/time takes any ffmpeg duration format
-ffmpeg-gif input.mov output.gif -S 00:10:00
+node-gify-cli input.mov output.gif -S 00:10:00
 ```
 
 ## Usage
 
 ```sh
-ffmpeg-gif input output [opts]
+node-gify-cli input output [opts]
 
 Options:
 
@@ -44,4 +44,4 @@ Options:
 
 ## License
 
-MIT, see [LICENSE.md](http://github.com/Jam3/ffmpeg-gif/blob/master/LICENSE.md) for details.
+MIT, see [LICENSE.md](http://github.com/Jam3/node-gify-cli/blob/master/LICENSE.md) for details.
