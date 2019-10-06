@@ -16,7 +16,6 @@ commander
   .option('-t, --time <time>', 'total duration')
   .action((input, output, options) => {
     argGiven = true
-    // TODO
     gify(input, output, options)
   })
   .parse(process.argv)

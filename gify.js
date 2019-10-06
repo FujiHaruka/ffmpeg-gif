@@ -3,7 +3,7 @@ const ffmpeg = require('@ffmpeg-installer/ffmpeg')
 const rimraf = require('rimraf')
 const flat = (a, b) => a.concat(b)
 
-function gify(input, output, options) {
+function gify(input, output, options = {}) {
   const suffix = '__tmp__palette_' + Date.now() + '.png'
   const tmpFileName = input + suffix
   let needsCleanup = false
@@ -17,11 +17,11 @@ function gify(input, output, options) {
   const filter1 = ['-vf', filterStr + ',palettegen']
   const filter2 = ['-filter_complex', filterStr + '[x];[x][1:v]paletteuse']
 
-  const pass1Flags = ['-y', ss, t, inputFlag, filter1, tmpFileName]
+  const baseFlags = ['-loglevel', 'error', '-y']
+  const pass1Flags = baseFlags.concat([ss, t, inputFlag, filter1, tmpFileName])
     .filter(Boolean)
     .reduce(flat, [])
-  const pass2Flags = [
-    '-y',
+  const pass2Flags = baseFlags.concat([
     ss,
     t,
     inputFlag,
@@ -31,7 +31,7 @@ function gify(input, output, options) {
     '-f',
     'gif',
     output,
-  ]
+  ])
     .filter(Boolean)
     .reduce(flat, [])
   const proc = spawn(ffmpeg.path, pass1Flags, { stdio: 'inherit' })
