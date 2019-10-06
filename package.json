@@ -21,8 +21,8 @@
     }
   ],
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "commander": "^3.0.2",
-    "minimist": "^1.2.0",
     "rimraf": "^2.5.2"
   },
   "devDependencies": {},
