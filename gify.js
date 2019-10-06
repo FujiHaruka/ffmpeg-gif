@@ -8,7 +8,7 @@ function gify(input, output, options = {}) {
   const tmpFileName = input + suffix
   let needsCleanup = false
 
-  const ss = options.start ? ['-ss', options.start] : ''
+  const ss = options.seek ? ['-ss', options.seek] : ''
   const t = options.time ? ['-t', options.time] : ''
   const inputFlag = ['-i', input]
   const fps = 'fps=' + (options.fps || 20) + ''

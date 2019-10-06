@@ -12,7 +12,6 @@ commander
   .option('-f, --fps <fps>', 'fps', '20')
   .option('-s, --scale <scale>', 'resize to width:height')
   .option('-S, --seek <seek>', 'seek to time')
-  .option('--start <start>')
   .option('-t, --time <time>', 'total duration')
   .action((input, output, options) => {
     argGiven = true
