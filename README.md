@@ -4,6 +4,8 @@ Forked from [Jam3/ffmpeg-gif](https://github.com/Jam3/ffmpeg-gif).
 
 A small script that converts videos to a high quality GIF, by spawning `ffmpeg` in two passes using `palettegen` filter.
 
+No need to install `ffmpeg` separately. It is included in the dependencies.
+
 ## Install
 
 ```sh
